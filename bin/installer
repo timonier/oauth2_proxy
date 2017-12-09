@@ -1,0 +1,38 @@
+#!/bin/sh
+set -ex
+
+# Check environment
+
+fail() {
+    echo 1>&2 "$1"
+    echo 1>&2 "Usage: $(basename "$0") [install|uninstall]"
+    exit 1
+}
+
+if [ "$#" -lt 1 ] ; then
+    fail "Invalid number of arguments."
+fi
+
+if [ "$(id --user)" -ne 0 ] ; then
+    fail "Impossible to prepare the system without root privileges."
+fi
+
+if [ "$(uname)" != "Linux" ] ; then
+    fail "Impossible to prepare another operating system than Linux."
+fi
+
+# Run installer
+
+case "$1" in
+    install )
+        curl --location --output /usr/local/bin/oauth2_proxy "https://github.com/timonier/oauth2_proxy/raw/master/bin/oauth2_proxy"
+        chmod +x /usr/local/bin/oauth2_proxy
+    ;;
+
+    uninstall )
+        rm --force /usr/local/bin/oauth2_proxy
+    ;;
+
+    * )
+        fail "Argument \"$1\" is invalid."
+esac
