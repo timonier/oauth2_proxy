@@ -4,13 +4,6 @@ A reverse proxy that provides authentication with Google, Github or other provid
 
 ## Installation
 
-Copy `bin/oauth2_proxy` into your executable folder (like `/usr/local/bin` or `$HOME/bin`):
-
-```sh
-sudo curl --location --output /usr/local/bin/oauth2_proxy "https://github.com/timonier/oauth2_proxy/raw/master/bin/oauth2_proxy"
-sudo chmod +x /usr/local/bin/oauth2_proxy
-```
-
 Linux users can use the [installer](https://github.com/timonier/oauth2_proxy/blob/master/bin/installer):
 
 ```sh

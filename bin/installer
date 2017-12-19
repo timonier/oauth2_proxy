@@ -25,7 +25,7 @@ fi
 
 case "$1" in
     install )
-        curl --location --output /usr/local/bin/oauth2_proxy "https://github.com/timonier/oauth2_proxy/raw/master/bin/oauth2_proxy"
+        curl --location --output /usr/local/bin/oauth2_proxy "https://github.com/timonier/oauth2_proxy/raw/master/bin/cmd"
         chmod +x /usr/local/bin/oauth2_proxy
     ;;
 

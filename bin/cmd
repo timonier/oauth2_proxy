@@ -20,4 +20,4 @@ docker run \
     --volume "${HOME}:${HOME}" \
     --volume "${PWD}:${PWD}" \
     --workdir "${PWD}" \
-    "${IMAGE:-timonier/oauth2_proxy}:${TAG:-latest}" oauth2_proxy "$@"
+    "${IMAGE:-timonier/oauth2_proxy}:${TAG:-latest}" "$(basename "$0")" "$@"
