@@ -46,6 +46,8 @@ oauth2_proxy \
 
 __Note__: Use the script `bin/build` to test your modifications locally.
 
+If you like / use this project, please let me known by adding a [★](https://help.github.com/articles/about-stars/) on the [GitHub repository](https://github.com/timonier/oauth2_proxy).
+
 ## Links
 
 * [bitly/oauth2_proxy](https://github.com/bitly/oauth2_proxy)
