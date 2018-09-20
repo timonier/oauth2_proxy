@@ -4,8 +4,6 @@ A reverse proxy that provides authentication with Google, Github or other provid
 
 ## Installation
 
-Linux users can use the [installer](https://github.com/timonier/oauth2_proxy/blob/master/bin/installer):
-
 ```sh
 # Define installation folder
 
