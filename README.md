@@ -2,6 +2,8 @@
 
 A reverse proxy that provides authentication with Google, Github or other provider
 
+⚠️ This project is no longer maintained. ⚠️
+
 ## Installation
 
 ```sh
@@ -37,18 +39,6 @@ export COOKIE_SECRET="$(bin/generate-secret)"
 
 oauth2_proxy --authenticated-emails-file=/tmp/oauth2_emails --client-id="${CLIENT_ID}" --client-secret="${CLIENT_SECRET}" --cookie-secret="${COOKIE_SECRET}" --cookie-secure=false  --http-address=:80  --provider=github  --upstream="http://127.0.0.1:9000/"
 ```
-
-## Contributing
-
-1. Fork it.
-2. Create your branch: `git checkout -b my-new-feature`.
-3. Commit your changes: `git commit -am 'Add some feature'`.
-4. Push to the branch: `git push origin my-new-feature`.
-5. Submit a pull request.
-
-__Note__: Use the script `bin/build-image` to test your modifications locally.
-
-If you like / use this project, please let me known by adding a [★](https://help.github.com/articles/about-stars/) on the [GitHub repository](https://github.com/timonier/oauth2_proxy).
 
 ## Links
 
